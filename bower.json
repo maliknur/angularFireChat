@@ -1,0 +1,14 @@
+{
+  "name": "angularfirechat",
+  "description": "angular chat with Firebase",
+  "main": "index.js",
+  "authors": [
+    "Malik Nurmatov <mnurmatov@gmail.com> (https://github.com/maliknurmatov)"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "firebase": "^3.4.1"
+  }
+}
