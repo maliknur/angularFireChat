@@ -2,7 +2,10 @@ var gulp = require('gulp');
 var server = require('gulp-server-livereload');
 var sass = require('gulp-sass');
 var prefix = require('gulp-autoprefixer');
-
+var useref = require('gulp-useref');
+var gulpif = require('gulp-if');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-csso');
 
 // run server
 gulp.task('server', function() {
@@ -12,6 +15,15 @@ gulp.task('server', function() {
 			port: 7700,
 			open: true
 		}));
+});
+
+// build html
+gulp.task('build', function() {
+	return gulp.src('app/*.html')
+		.pipe(useref())
+		.pipe(gulpif('*.js', uglify()))
+		.pipe(gulpif('*.css', minifyCss()))
+		.pipe(gulp.dest('public'));
 });
 
 // compile sass
