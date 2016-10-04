@@ -11,5 +11,5 @@
 	};
 	firebase.initializeApp(config);
 
-	angular.module('angularFireChat', []);
+	angular.module('angularFireChat', ['firebase']);
 })();
