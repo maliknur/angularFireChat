@@ -1,3 +1,23 @@
+.btn {
+  color: #fff;
+  border: none;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+  padding: 10px 30px;
+  -webkit-box-shadow: 0 5px 10px -4px #000;
+          box-shadow: 0 5px 10px -4px #000;
+  -webkit-transition: all .3s;
+  transition: all .3s; }
+  .btn:hover {
+    -webkit-box-shadow: 0 0 10px -4px #000;
+            box-shadow: 0 0 10px -4px #000; }
+
+.btn-green {
+  background-color: #3aa757; }
+
+.btn-red {
+  background-color: #fc0d1b; }
+
 .chat-page {
   height: 100vh;
   display: -webkit-box;
@@ -31,6 +51,13 @@
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
+.chat-header,
+.chat-footer {
+  text-align: center;
+  padding: 20px;
+  -webkit-box-shadow: 0 0 20px -5px #000;
+          box-shadow: 0 0 20px -5px #000; }
+
 .chat-header-author {
   font-weight: 700;
   font-size: 18px; }
@@ -62,7 +89,6 @@
 
 .chat-footer textarea {
   width: 70%;
-  padding: 10px;
   border: none;
   -webkit-box-shadow: 0 0 10px -5px #000;
           box-shadow: 0 0 10px -5px #000;
